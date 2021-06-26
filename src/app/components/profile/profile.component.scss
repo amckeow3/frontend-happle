@@ -1,0 +1,42 @@
+@import 'bootswatch/dist/materia/bootstrap.min.css';
+@import '../../app.component.scss';
+
+h2 {
+  margin-top: 40px;
+}
+
+h5 {
+  letter-spacing: 0;
+}
+.profile-section {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.info {
+  padding-left: 20px;
+  padding-top: 10px;
+  border: .1px solid black;
+  width: 30rem;
+  height: 5rem;
+}
+
+.delete {
+  display: flex;
+  justify-content: center;
+}
+
+.delete-btn {
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.edit-btn {
+  width: 60px;
+  float: right;
+  align-self: center;
+  border: none;
+  color: $blue;
+  background: none;
+}

@@ -1,0 +1,56 @@
+@import 'bootswatch/dist/materia/bootstrap.min.css';
+@import '../../app.component.scss';
+
+.login-section {
+  display: flex;
+  justify-content: center;
+
+  .login-line-style {
+    display: flex;
+    max-width: 500px;
+    font-size: 20px;
+  }
+}
+
+.login-btn {
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 10px;
+  background: $blue;
+  width: 350px;
+
+  //Vertically center children elements
+  align-items: center;
+  border: none;
+}
+
+.form-container {
+  display: flex;
+  padding-top: 80px;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: $navy;
+}
+
+.form-container form {
+  height: 50vh;
+  width: 450px;
+  background:rgba(255,255,255,0.4);
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+}
+
+@media screen and (max-width: 600px) {
+  .form-container form {
+    background: $navy;
+    border: none;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,53 @@
+@import "bootswatch/dist/materia/bootstrap.min.css";
+@import '../../app.component.scss';
+
+.white-nav {
+  //background:rgba(255,255,255,0.4);
+  background: $navy;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,.3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  backdrop-filter: blur(10px);
+  transform-style: preserve-3d;
+}
+
+.navbar-brand {
+  margin-left: 5rem;
+}
+
+.nav1 {
+  color: $navy;
+}
+
+.nav2 {
+  color: $white;
+}
+
+.nav2:hover {
+  color: rgba(255, 255, 255, 0.555);
+}
+
+.nav2.active {
+  color: rgba(255, 255, 255, 0.555);
+}
+
+.register-btn {
+  background: $blue;
+  border: none;
+}
+
+.register-btn:hover {
+  background: $blue;
+  opacity: 1.5;
+}
+
+.img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar-brand {
+    margin-left: 0;
+  }
+}

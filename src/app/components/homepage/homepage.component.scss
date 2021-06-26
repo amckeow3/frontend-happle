@@ -1,0 +1,38 @@
+@import 'bootswatch/dist/materia/bootstrap.min.css';
+@import '../../app.component.scss';
+
+.item-section {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  padding-top: 40px;
+  justify-content: center;
+}
+
+.header2{
+  color: #283149;
+}
+
+.item-section {
+  .details-button {
+    float: right;
+    font-size: .9rem;
+    border: none;
+  }
+}
+
+.card {
+  right:auto;
+  left: auto;
+  display: flex;
+  width: 800px;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 330px;
+  }
+}

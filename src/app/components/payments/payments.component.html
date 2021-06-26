@@ -1,0 +1,213 @@
+<div class="container" *ngIf="currentUser">
+  <div class="main-section">
+    <h2 class="header2" style="text-align:center">Your Debit and Credit Cards</h2>
+    <ng-container *ngFor="let payment of payments; let i = index">
+      <div class="card mb-3"  style="margin: auto; max-width: 40rem; ">
+      <div class="card-body">
+      <h4 class="card-title">{{ payment.payment_type }} {{ payment.card_no }}</h4>
+       <div class="card-text">
+           Expires: {{ payment.exp_month }}/{{ payment.exp_year }}
+           <div style="float: right">
+             {{payment.card_type}}
+            </div>
+        </div>
+      </div>
+   </div>
+  </ng-container>
+  </div>
+</div>
+    <!--Step 1:Adding HTML-->
+    <div class="new-payment-button">
+      <button class="btn btn-success"onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Add Debit or Credit Card</button>
+    </div>
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content animate"
+          *ngIf="!isSuccessful"
+          name="form"
+          (ngSubmit)="f.form.valid && onSubmit()"
+          #f="ngForm"
+          novalidate>
+        <fieldset>
+          <div class="form-group">
+            <label for="card_no" class="payment-card__field-label">
+              Card number
+            </label>
+          <p>
+            <input
+              class="payment-card__input"
+              style="width: 20rem;"
+              type="text"
+              name="card_no"
+              [(ngModel)]="form.card_no"
+              required
+              minlength="16"
+              #card_no="ngModel"
+              inputmode="numeric"
+              pattern="[0-9\s]{13,19}"
+            />
+          </p>
+          <div class="alert-danger" *ngIf="card_no.errors && f.submitted">
+            <div *ngIf="card_no.errors.required">Card number is required</div>
+              <div *ngIf="card_no.errors.minlength">
+                Card number must be 16 characters
+              </div>
+            </div>
+          </div>
+
+        <div class="form-group">
+          <label for="name" class="payment-card__field-label">
+            Name on card
+          </label>
+        <p>
+            <input
+              class="payment-card__input"
+              style="width: 20rem;"
+              type="text"
+              name="name"
+              [(ngModel)]="form.name"
+              required
+              #name="ngModel"
+            />
+        </p>
+        <div class="alert-danger" *ngIf="name.errors && f.submitted">
+          <div *ngIf="name.errors.required">Name is required</div>
+        </div>
+      </div>
+
+        <div class="form-group">
+          <label for="card_type" class="payment-card__field-label">
+            Card Type:
+          </label>
+          <div class="input-group-prepend"></div>
+          <select
+            class="custom-select"
+            type="text"
+            style="width: 20rem;"
+            name="card_type"
+            [(ngModel)]="form.card_type"
+            required
+            #card_type="ngModel">
+          <option value="American Express">American Express</option>
+          <option value="Mastercard">Mastercard</option>
+          <option value="Visa">Visa</option>
+          <option value="Discover">Discover</option>
+          <div class="alert-danger" *ngIf="card_type.errors && f.submitted">
+            <div *ngIf="card_type.errors.required">card type is required</div>
+          </div>
+          </select>
+        </div>
+
+      <div class="form-group">
+        <label for="cvc" class="payment-card__field-label">
+          CVC
+        </label>
+      <p>
+        <input
+          class="payment-card__input"
+          style="width: 20rem;"
+          type="text"
+          name="cvc"
+          [(ngModel)]="form.cvc"
+          required
+          length="3"
+          #cvc="ngModel"
+        />
+      </p>
+      <div class="alert-danger" *ngIf="cvc.errors && f.submitted">
+        <div *ngIf="cvc.errors.required">CVC is required</div>
+          <div *ngIf="cvc.errors.length">
+            3 digit number required
+          </div>
+        </div>
+      </div>
+
+  <div class="payment-card__extra-fields">
+    <div class="row line-style">
+      <label class="payment-card__field-label">
+        Expiration Date
+      </label>
+      <div class="exp-month">
+        <div class="form-group">
+        <select
+          class="custom-select"
+          type="text"
+          name="exp_month"
+          [(ngModel)]="form.exp_month"
+          required
+          #exp_month="ngModel">
+        <option value="1">01</option>
+        <option value="2">02</option>
+        <option value="3">03</option>
+        <option value="4">04</option>
+        <option value="5">05</option>
+        <option value="6">06</option>
+        <option value="7">07</option>
+        <option value="8">08</option>
+        <option value="9">09</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <div class="alert-danger" *ngIf="exp_month.errors && f.submitted">
+          <div *ngIf="exp_month.errors.required">Expiration month is required</div>
+        </div>
+      </select>
+    </div>
+  </div>
+
+  <div class="exp-year">
+    <div class="form-group">
+      <!--<div class="input-group-prepend"></div>-->
+      <select
+        class="custom-select"
+        type="text"
+        name="exp_year"
+        [(ngModel)]="form.exp_year"
+        required
+        #exp_year="ngModel">
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+      <option value="2029">2029</option>
+      <option value="2030">2030</option>
+      <option value="2031">2031</option>
+      <option value="2032">2032</option>
+      <option value="2023">2033</option>
+      <option value="2024">2034</option>
+      <option value="2025">2035</option>
+      <option value="2026">2036</option>
+      <option value="2027">2037</option>
+      <option value="2028">2038</option>
+      <option value="2029">2039</option>
+      <option value="2030">2040</option>
+      <option value="2031">2041</option>
+      <div class="alert-danger" *ngIf="exp_year.errors && f.submitted">
+        <div *ngIf="exp_year.errors.required">Expiration year is required</div>
+      </div>
+      </select>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="clearfix">
+      <button type="submit" class="btn btn-primary submitbtn">Add your card</button>
+    </div>
+  </div>
+
+  <div class="alert alert-warning" *ngIf="f.submitted && isRegistrationFailed">
+    Payment method registration failed!<br />{{ errorMessage }}
+  </div>
+  </fieldset>
+  </form>
+</div>
+
+<div class="alert alert-success" *ngIf="isSuccessful">
+  Payment method was successfully added!
+</div>

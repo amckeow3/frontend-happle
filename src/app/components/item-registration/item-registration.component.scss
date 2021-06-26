@@ -1,0 +1,52 @@
+@import 'bootswatch/dist/materia/bootstrap.min.css';
+@import '../../app.component.scss';
+
+.item-registration-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new-item {
+  width: 50rem;
+  display: flex;
+  margin-top: 50px;
+  align-content: center;
+  justify-content: center;
+}
+
+.new-item___field {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-item__field-label {
+  color: $navy;
+  margin: 0 0 0.2rem;
+  font-weight: 400;
+}
+
+.new-item__input {
+  border: none;
+  background: none;
+  border-bottom: dashed 0.12rem rgba(255, 255, 255, 0.5);
+}
+
+.new-item__input:focus {
+  outline: none;
+}
+
+.payment-card::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: none;
+}
+
+.submit-registration-btn {
+  font-size: 20px;
+  background: $blue;
+  width: 100%;
+
+  //Vertically center children elements
+  align-items: center;
+  border: none;
+}

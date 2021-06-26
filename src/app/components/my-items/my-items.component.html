@@ -1,0 +1,21 @@
+<div class="container main" *ngIf="currentUser">
+  <h2 class="header2" style="text-align:center">Your Items</h2>
+    <ng-container *ngFor="let item of items; let i = index">
+            <div class="item-section">
+         <div class="card"  style="margin: auto; max-width: 40rem;">
+         <div class="card-body">
+           <div class="delete-edit">
+           <!--- <a href="#" class="card-link">Edit</a>
+          <button type="button" class="card-link btn btn-danger">Delete</button> -->
+        </div>
+        <h4 class="card-title">{{ item.item_name }}</h4>
+          <p class="card-text">
+              Description: {{ item.item_desc }}
+              <br>
+              Price per day: ${{ item.price_per_day}}
+        </p>
+      </div>
+      </div>
+    </div>
+  </ng-container>
+  </div>

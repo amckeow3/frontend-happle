@@ -1,0 +1,30 @@
+@import 'bootswatch/dist/materia/bootstrap.min.css';
+
+.row {
+  display: flex;
+  border: 1px;
+  justify-content: center;
+}
+
+.leftcolumn {
+  float: left;
+  width: 40%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 30%;
+  padding-left: 20px;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .9rem;
+}
+
+.card {
+  padding: 20px;
+  margin-top: 20px;
+}

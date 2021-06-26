@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="button-section">
+  <button class="btn" [routerLink]="['/profile']" [queryParams]="{ username: currentUser.username }"><i class="fa fa-user"></i> My Profile</button>
+  <button class="btn" [routerLink]="['/my-items']" [queryParams]="{ username: currentUser.username }"><i class="fa fa-wrench"></i> My Items</button>
+  <button class="btn" [routerLink]="['/payments']" [queryParams]="{ username: currentUser.username }"><i class="fa fa-credit-card"></i> My Payments</button>
+</div>

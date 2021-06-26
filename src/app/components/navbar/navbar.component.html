@@ -1,0 +1,46 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div *ngIf="!isLoggedIn">
+  <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link nav1" [routerLink]="['/']">Back</a>
+            </li>
+          </ul>
+    </div>
+  </nav>
+</div>
+
+  <div *ngIf="isLoggedIn">
+    <nav class="navbar navbar-expand-lg white-nav">
+      <div class="container-fluid">
+      <a class="navbar-brand"><img src="https://sat02pap001files.storage.live.com/y4mUfnXsPe5Q9vegk0JAkQtv_dLw7izWG4rr_qaXsfULcFYB5CZleI9zHS12vuQ9blTZMhD0i8AurNeYdmdvnza47K0Oh7Awm3OICMRb_BUb2eneXRk_Lf2LPc9JmiQjJA9aK4ZHqQvcHs0FNVbtyvssGHC_oqk23Nyky0qWCyfUi-n5wQri8k0cD6LI8BO9sWd?width=256&height=111&cropmode=none" width="203" height="85" /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
+        </span>
+      </button>
+    <div class="collapse navbar-collapse" id="navbarColor03">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link nav2" routerLinkActive="active" [routerLink]="['/homepage']" [queryParams]="{ username: currentUser.username, zipcode: currentUser.zipcode }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav2" routerLinkActive="active" [routerLink]="['/account']" [queryParams]="{ username: currentUser.username }">Account</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav2" routerLinkActive="active" [routerLink]="['/notifications']" [queryParams]="{ username: currentUser.username }">Notifications</a>
+        </li>
+        <li class="nav-item">
+          <a href class="nav-link nav2" onLoad="active" (click)="signOut()">Log Out</a>
+        </li>
+      </ul>
+        <button class="btn btn-primary register-btn" [routerLink]="['/item-registration']" [queryParams]="{ username: currentUser.username }">Register New Item</button>
+    </div>
+  </div>
+  </nav>
+</div>

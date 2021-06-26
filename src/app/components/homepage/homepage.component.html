@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="form-container">
+<div class="item-section">
+<div class="container" *ngIf="currentUser; else loggedOut">
+    <h2 class="header2" style="text-align:center">Lenders in {{ currentUser.zipcode }} <i class="fa fa-map-marker"></i></h2>
+      <ng-container *ngFor="let user of users; let i = index">
+        <div *ngFor="let item of user.items">
+        <div class="card mb-3" style="margin:auto; max-width: 40rem;">
+        <div class="d-flex w-100 justify-content-between">
+          <div class="card-header">{{ user.username }}</div>
+          <small class="text-muted" id="subtractDate">
+            ? days ago
+          </small>
+        </div>
+          <div class="card-body">
+            <h4 class="card-title" style="text-transform: capitalize; letter-spacing: normal;">{{ item.item_name }}</h4>
+            <p class="card-text">
+            <a>
+              ${{ item.price_per_day }} per day
+              <button type="button" class="btn btn-success details-button" [routerLink]="['/item-details']" [queryParams]="{ username: user.username, item_name: item.item_name }">Details</button>
+            </a>
+          </p>
+          </div>
+      </div>
+  </div>
+  </ng-container>
+  </div>
+</div>
+</div>
+
+<ng-template #loggedOut>
+  Please login.
+</ng-template>
+

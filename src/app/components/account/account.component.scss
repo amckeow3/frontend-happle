@@ -1,0 +1,16 @@
+@import 'bootswatch/dist/materia/bootstrap.min.css';
+
+.btn {
+  background: none;
+  width: 320px;
+  padding: 20px 24px;
+  font-size: 32px;
+  margin: 4px 9px;
+}
+
+.button-section {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}

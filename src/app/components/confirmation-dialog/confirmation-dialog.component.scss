@@ -1,0 +1,11 @@
+@import 'bootswatch/dist/materia/bootstrap.min.css';
+@import '../../app.component.scss';
+
+.confirm-btn {
+  background: $blue;
+  color: $white;
+}
+
+.cancel-btn {
+  color: black;
+}

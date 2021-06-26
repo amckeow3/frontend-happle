@@ -1,0 +1,158 @@
+<div class="form-container">
+  <form class="signup-section"
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate>
+    <fieldset>
+      <div class="container">
+      <div class="form-group">
+        <input
+        type="text"
+        class="form-control line-style"
+        name="username"
+        placeholder="Username"
+        [(ngModel)]="form.username"
+        required
+        #username="ngModel"
+        />
+        <div class="alert-danger" *ngIf="username.errors && f.submitted">
+          <div *ngIf="username.errors.required">Username is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-group">
+        <input
+        type="email"
+        class="form-control line-style"
+        name="email"
+        placeholder="Email"
+        [(ngModel)]="form.email"
+        required
+        email
+        #email="ngModel"
+        />
+        <div class="alert-danger" *ngIf="email.errors && f.submitted">
+          <div *ngIf="email.errors.required">Email is required</div>
+          <div *ngIf="email.errors.email">
+            Email must be a valid email address
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-group">
+        <input
+        type="password"
+        class="form-control line-style"
+        name="password"
+        placeholder="Password"
+        [(ngModel)]="form.password"
+        required
+        minlength="8"
+        #password="ngModel"
+        />
+        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">
+            Password must be at least 8 characters
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-group">
+        <input
+        type="first_name"
+        class="form-control line-style"
+        name="first_name"
+        placeholder="First Name"
+        [(ngModel)]="form.first_name"
+        required
+        #first_name="ngModel"
+        />
+        <div class="alert-danger" *ngIf="first_name.errors && f.submitted">
+          <div *ngIf="first_name.errors.required">First Name is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-group">
+        <input
+        type="last_name"
+        class="form-control line-style"
+        name="last_name"
+        placeholder="Last Name"
+        [(ngModel)]="form.last_name"
+        required
+        #last_name="ngModel"
+        />
+        <div class="alert-danger" *ngIf="last_name.errors && f.submitted">
+          <div *ngIf="last_name.errors.required">Last Name is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-group">
+        <input
+        type="address"
+        class="form-control line-style"
+        name="address"
+        placeholder="Street Address"
+        [(ngModel)]="form.address"
+        required
+        #address="ngModel"
+        />
+        <div class="alert-danger" *ngIf="address.errors && f.submitted">
+          <div *ngIf="address.errors.required">Street address is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-group">
+        <input
+        type="zipcode"
+        class="form-control line-style"
+        name="zipcode"
+        placeholder="Zipcode"
+        [(ngModel)]="form.zipcode"
+        required
+        #zipcode="ngModel"
+        />
+        <div class="alert-danger" *ngIf="zipcode.errors && f.submitted">
+          <div *ngIf="zipcode.errors.required">Zip Code is required</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="form-group">
+        <input
+        type="tel"
+        class="form-control line-style"
+        name="phone"
+        placeholder="Phone Number"
+        placeholder="123-456-7890"
+        [(ngModel)]="form.phone"
+        required
+        #phone="ngModel"
+        />
+        <div class="alert-danger" *ngIf="phone.errors && f.submitted">
+          <div *ngIf="phone.errors.required">Phone number is required</div>
+        </div>
+      </div>
+    </div>
+      <div class="form-group">
+        <button class="btn btn-primary submit-signup-btn btn-block">Sign Up</button>
+      </div>
+
+      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+        Signup failed!<br />{{ errorMessage }}
+      </div>
+  </fieldset>
+  </form>
+  </div>
+  <div *ngIf="isSuccessful">
+
+  </div>

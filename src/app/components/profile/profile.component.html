@@ -1,0 +1,38 @@
+<h2 class="header2" style="text-align:center">Your Profile</h2>
+<div class="profile-section">
+  <table>
+  <div class="info">
+  <h5 class="mb-1">Username:</h5>
+  <p>
+    {{ currentUser.username }}
+  </p>
+</div>
+  <div class="info">
+  <h5 class="mb-1">Name:</h5>
+    {{ currentUser.first_name }} {{currentUser.last_name}}
+  </div>
+  <div class="info">
+    <button type="button" class="edit-btn">edit</button>
+    <h5 class="mb-1">Email:</h5>
+      {{ currentUser.email }}
+  </div>
+  <div class="info">
+    <button type="button" class="edit-btn">edit</button>
+    <h5 class="mb-1">Address:</h5>
+      {{ currentUser.address }}
+  </div>
+  <div class="info">
+    <button type="button" class="edit-btn">edit</button>
+    <h5 class="mb-1">Zipcode:</h5>
+      {{ currentUser.zipcode }}
+  </div>
+  <div class="info">
+    <button type="button" class="edit-btn">edit</button>
+    <h5 class="mb-1">Phone Number:</h5>
+      {{ currentUser.phone }}
+</div>
+</table>
+</div>
+<div class="delete">
+  <button type="button" class="btn btn-danger delete-btn" (click)="openConfirmationDialog()">Delete Account</button>
+</div>
