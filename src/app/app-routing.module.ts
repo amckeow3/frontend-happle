@@ -10,6 +10,7 @@ import { MyItemsComponent } from './components/my-items/my-items.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { AccountComponent } from './components/account/account.component';
 import { PaymentsComponent } from './components/payments/payments.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'payments',
     component: PaymentsComponent
+  },
+  {
+    path: 'notifications',
+    component: NotificationsComponent
   }
 ];
 

@@ -54,7 +54,7 @@
 .signup-button {
   border: solid 2px $white;
   border-radius: 5px;
-  width: 150px;
+  width: 200px;
   height: 40px;
   background: none;
   color: $white;
@@ -90,6 +90,7 @@ img {
   max-height: 100%;
   display: block;
 }
+
 
 @media screen and (max-width: 600px) {
   .btn-group {

@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 const API_URL = 'https://happle-backend.azurewebsites.net/';
-//const AUTH_API = 'http://localhost:4000/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json'})
