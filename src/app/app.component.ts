@@ -9,6 +9,7 @@ import { TokenStorageService } from './_services/token-storage/token-storage.ser
 export class AppComponent implements OnInit {
   isLoggedIn = false;
   currentUser: any;
+  isCollapsed = false;
 
   constructor(private tokenStorageService: TokenStorageService) { }
 
