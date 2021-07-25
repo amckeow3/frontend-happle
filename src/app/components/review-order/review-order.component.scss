@@ -1,0 +1,28 @@
+@import 'bootswatch/dist/materia/bootstrap.min.css';
+
+.purchase-details {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin: 40px;
+}
+
+h1 {
+    text-align: center;
+    margin: 40px;
+}
+
+h4 {
+    font-weight: 700;
+}
+
+.item-details {
+    text-align: center;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}

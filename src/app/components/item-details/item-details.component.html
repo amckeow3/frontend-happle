@@ -1,18 +1,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <ng-container *ngFor="let details of data; let i = index">
 
-      <div class="row">
-      <div class="leftcolumn">
+<div class="item-details">
+  <ng-container *ngFor="let details of data; let i = index">
+      <div class="left-column">
       <div class="card">
          <div class="card-body">
         <h4 class="card-title">{{ details.item_name }}</h4>
           <p class="card-text">
              {{ details.item_desc }}
         </p>
-      </div>
-      </div>
-    </div>
-      <div class="rightcolumn">
+        </div>
+       </div>
+       </div>
+       <div class="right-column">
         <div class="card">
           <div class="card-body">
             <div class="card-text">
@@ -20,18 +20,17 @@
             </div>
           </div>
         </div>
-      <div class="card">
+        <div class="card">
         <div class="card-body">
-        <h4 class="card-title" style="display: flex; justify-content: center; font-size: 30px;">${{ details.price_per_day }}</h4>
+        <h4 class="card-title" style="display: flex; justify-content: center; font-size: 30px;">Price: ${{ details.price_per_day }}</h4>
         <hr class="my-4">
         <div class="card-text">
       </div>
     <div class="button-section">
-       <button type="button" class="btn btn-success button-section" [routerLink]="['/purchase-item']" [queryParams]="{ buyer: currentUser.username, seller: details.username, item: details.item_name }">BUY NOW</button>
-     </div>
+       <button type="button" class="btn btn-success button-section" [routerLink]="['/choose-payment']" [queryParams]="{ buyer: currentUser.username, seller: details.username, item: details.item_name }">BUY NOW</button>
+      </div>
     </div>
     </div>
-    </div>
-</div>
-
+  </div>
   </ng-container>
+</div>

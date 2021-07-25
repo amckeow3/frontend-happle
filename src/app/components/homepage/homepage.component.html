@@ -3,7 +3,7 @@
 <div class="form-container">
 <div class="item-section">
 <div class="container" *ngIf="currentUser; else loggedOut">
-    <h2 class="header2" style="text-align:center">Lenders in {{ currentUser.zipcode }} <i class="fa fa-map-marker"></i></h2>
+    <h2 class="header2" style="text-align:center">Items For Sale - <span>{{ currentUser.zipcode }}</span> <i class="fa fa-map-marker"></i></h2>
       <ng-container *ngFor="let user of users; let i = index">
         <div *ngFor="let item of user.items">
         <div class="card mb-3" style="margin:auto; max-width: 40rem;">

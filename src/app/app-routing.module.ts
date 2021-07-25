@@ -11,7 +11,9 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
 import { AccountComponent } from './components/account/account.component';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
-import { PurchaseItemComponent } from './components/purchase-item/purchase-item.component';
+import { ChoosePaymentComponent } from './components/choose-payment/choose-payment.component';
+import { ReviewOrderComponent } from './components/review-order/review-order.component';
+import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
 
 const routes: Routes = [
   {
@@ -59,8 +61,16 @@ const routes: Routes = [
     component: NotificationsComponent
   },
   {
-    path: 'purchase-item',
-    component: PurchaseItemComponent
+    path: 'choose-payment',
+    component: ChoosePaymentComponent
+  },
+  {
+    path: 'review-order',
+    component: ReviewOrderComponent
+  },
+  {
+    path: 'order-confirmation',
+    component: OrderConfirmationComponent
   },
 ];
 

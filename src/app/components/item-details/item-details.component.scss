@@ -1,21 +1,23 @@
 @import 'bootswatch/dist/materia/bootstrap.min.css';
 @import '../../app.component.scss';
 
-.row {
+.item-details {
   display: flex;
-  border: 1px;
   justify-content: center;
 }
 
-.leftcolumn {
+.left-column {
+  display: flex;
   float: left;
-  width: 40%;
+  padding: 20px;
+  max-width: 30%;
 }
 
-.rightcolumn {
+.right-column {
+  display: block;
   float: left;
-  width: 30%;
-  padding-left: 20px;
+  padding: 20px;
+  max-width: 30%;
 }
 
 .button-section {

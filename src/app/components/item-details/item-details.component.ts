@@ -13,10 +13,6 @@ export class ItemDetailsComponent implements OnInit {
   currentUser: any;
   data: any = [];
   errorMessage = '';
-  form: any = {
-    fromDt: null,
-    toDt: null
-  }
   isSuccessful = false;
   isSignUpFailed = false;
 

@@ -32,4 +32,9 @@ export class PaymentService {
     return this.http.get(API_URL + 'myPaymentMethods/' + username)
     .pipe(map((response: any) => response));
   }
+
+  paymentMethodDetails(username: string, card_no: string): Observable<any> {
+    return this.http.get(API_URL + 'paymentMethodDetails/' + username + '/' + card_no)
+    .pipe(map((response: any) => response));
+  }
 }

@@ -1,0 +1,19 @@
+<div class="payment-method">
+    <h1>Select a Payment Method:</h1>
+    <ng-container *ngFor="let payment of payments; let i = index">
+      <div *ngFor="let details of item">
+      <div class="card mb-3"  style="margin: auto; max-width: 40rem; ">
+      <div class="card-body">
+        <h4 class="card-title">{{ payment.payment_type }} {{ payment.card_no }}</h4>
+        <div class="card-text">
+          Expires: {{ payment.exp_month }}/{{ payment.exp_year }}
+          <div style="float: right">
+            {{payment.card_type}}
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success details-button" [routerLink]="['/review-order']" [queryParams]="{ payment: payment.card_no, buyer: this.currentUser.username, seller: details.username, item: details.item_name }">Select</button>
+    </div>
+    </div>
+  </ng-container>
+  </div>
