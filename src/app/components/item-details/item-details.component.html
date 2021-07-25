@@ -22,54 +22,12 @@
         </div>
       <div class="card">
         <div class="card-body">
-        <h4 class="card-title" style="display: flex; justify-content: center; font-size: 30px;">${{ details.price_per_day }} per day</h4>
+        <h4 class="card-title" style="display: flex; justify-content: center; font-size: 30px;">${{ details.price_per_day }}</h4>
         <hr class="my-4">
-         <div class="card-text">
-          <form
-          *ngIf="!isSuccessful"
-          name="form"
-          (ngSubmit)="f.form.valid && onSubmit()"
-          #f="ngForm"
-          novalidate>
-          <fieldset>
-            <div class="form-group" style="float:left; width: 45%;">
-              <label for="fromDt">From</label>
-              <input
-              type="date"
-              class="form-control line-style"
-              name="fromDt"
-              [(ngModel)]="form.fromDt"
-              required
-              #fromDt="ngModel"
-            />
-          <div class="alert-danger" *ngIf="fromDt.errors && f.submitted">
-            <div *ngIf="fromDt.errors.required">Date is required</div>
-          </div>
-        </div>
-        <div class="form-group" style="float:right; width: 45%;">
-          <label for="toDt">To</label>
-          <input
-          type="date"
-          class="form-control line-style"
-          name="email"
-          placeholder="Email"
-          [(ngModel)]="form.email"
-          required
-          email
-          #email="ngModel"
-          />
-          <div class="alert-danger" *ngIf="email.errors && f.submitted">
-            <div *ngIf="email.errors.required">Email is required</div>
-            <div *ngIf="email.errors.email">
-              Email must be a valid email address
-            </div>
-          </div>
-        </div>
-</fieldset>
-</form>
-  </div>
+        <div class="card-text">
+      </div>
     <div class="button-section">
-       <button type="button" class="btn btn-success button-section">Request</button>
+       <button type="button" class="btn btn-success button-section">BUY NOW</button>
      </div>
     </div>
     </div>

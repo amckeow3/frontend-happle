@@ -21,6 +21,7 @@ import { PaymentsComponent } from './components/payments/payments.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { ConfirmationDialogService } from './_services/confirmation-dialog/confirmation-dialog.service';
+import { PurchaseItemComponent } from './components/purchase-item/purchase-item.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ConfirmationDialogService } from './_services/confirmation-dialog/confi
     MyItemsComponent,
     PaymentsComponent,
     ProfileComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    PurchaseItemComponent
   ],
   imports: [
     BrowserModule,

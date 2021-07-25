@@ -1,4 +1,5 @@
 @import 'bootswatch/dist/materia/bootstrap.min.css';
+@import '../../app.component.scss';
 
 .row {
   display: flex;
@@ -27,4 +28,10 @@
 .card {
   padding: 20px;
   margin-top: 20px;
+}
+
+.btn-success {
+  color: black;
+  background: $yellow;
+  border: none;
 }
