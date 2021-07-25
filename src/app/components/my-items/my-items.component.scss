@@ -3,8 +3,27 @@
 
 .main {
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .item-section {
   margin-top: 20px;
+}
+
+.register-btn {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background: $blue;
+  border: none;
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.register-btn:hover {
+  background: $blue;
+  opacity: 1.5;
 }

@@ -9,10 +9,22 @@
   margin-top: 40px;
 }
 
-.new-payment-button {
+.new-payment {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.new-payment-button {
+  border: none;
   margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.card {
+  font-size: 15px;
+  padding: 5px 30px;
+  width: 30rem;
 }
 
 /*add full-width input fields*/
@@ -113,11 +125,6 @@ input:focus {
 }
 
 @media screen and (max-width: 300px) {
-    .cancelbtn,
-    .signupbtn {
-        width: 100%;
-    }
-
     .main-section {
       margin-top: 0;
     }
