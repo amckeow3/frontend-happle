@@ -35,3 +35,23 @@
   background: $yellow;
   border: none;
 }
+
+.btn-success:hover {
+  color: black;
+  background: $light-yellow;
+  border: none;
+}
+
+.btn-success:focus {
+  color: black;
+  background: $yellow;
+  border: none;
+}
+
+.btn-success:active {
+  color: black;
+  background: $yellow;
+  border: none;
+}
+
+

@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./item-details.component.scss']
 })
 export class ItemDetailsComponent implements OnInit {
+  currentUser: any;
   data: any = [];
   errorMessage = '';
   form: any = {
@@ -19,9 +20,10 @@ export class ItemDetailsComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
 
-  constructor(private route: ActivatedRoute, private itemService: ItemService, private http: HttpClient) { }
+  constructor(private route: ActivatedRoute, private itemService: ItemService, private http: HttpClient, private token: TokenStorageService) { }
 
   ngOnInit(): void {
+    this.currentUser = this.token.getUser();
     this.route.queryParams
     .subscribe(params => {
       console.log(params);
@@ -42,7 +44,6 @@ export class ItemDetailsComponent implements OnInit {
   }
 
   onSubmit(): void {
-    const { fromDt, toDt } = this.form;
 
   }
 }

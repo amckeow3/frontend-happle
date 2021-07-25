@@ -55,9 +55,4 @@ export class HomepageComponent implements OnInit {
         })
     })
   }
-
-  getTime() {
-    var today = new Date();
-    return today;
-  }
 }

@@ -11,6 +11,7 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
 import { AccountComponent } from './components/account/account.component';
 import { PaymentsComponent } from './components/payments/payments.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { PurchaseItemComponent } from './components/purchase-item/purchase-item.component';
 
 const routes: Routes = [
   {
@@ -56,7 +57,11 @@ const routes: Routes = [
   {
     path: 'notifications',
     component: NotificationsComponent
-  }
+  },
+  {
+    path: 'purchase-item',
+    component: PurchaseItemComponent
+  },
 ];
 
 @NgModule({

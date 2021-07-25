@@ -27,7 +27,7 @@
         <div class="card-text">
       </div>
     <div class="button-section">
-       <button type="button" class="btn btn-success button-section">BUY NOW</button>
+       <button type="button" class="btn btn-success button-section" [routerLink]="['/purchase-item']" [queryParams]="{ buyer: currentUser.username, seller: details.username, item: details.item_name }">BUY NOW</button>
      </div>
     </div>
     </div>
