@@ -7,12 +7,6 @@
       <ng-container *ngFor="let user of users; let i = index">
         <div *ngFor="let item of user.items">
         <div class="card mb-3" style="margin:auto; max-width: 40rem;">
-        <div class="d-flex w-100 justify-content-between">
-          <div class="card-header">{{ user.username }}</div>
-          <small class="text-muted" id="subtractDate">
-            ? days ago
-          </small>
-        </div>
           <div class="card-body">
             <h4 class="card-title" style="text-transform: capitalize; letter-spacing: normal;">{{ item.item_name }}</h4>
             <p class="card-text">
