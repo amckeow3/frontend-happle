@@ -2,12 +2,17 @@
 @import '../../app.component.scss';
 
 .main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 40px;
 }
 
 .new-payment-button {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 /*add full-width input fields*/
@@ -67,7 +72,6 @@ input:focus {
 /*define the close button*/
 
 .close {
-    position: absolute;
     right: 35px;
     top: 80px;
     color: rgb(255, 0, 0);
@@ -112,5 +116,9 @@ input:focus {
     .cancelbtn,
     .signupbtn {
         width: 100%;
+    }
+
+    .main-section {
+      margin-top: 0;
     }
 }
