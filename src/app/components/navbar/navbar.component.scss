@@ -13,7 +13,10 @@
 }
 
 .navbar-brand {
+  display: flex;
   margin-left: 5rem;
+  align-self: center;
+  height: auto;
 }
 
 .nav1 {
