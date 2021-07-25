@@ -59,6 +59,25 @@
 
 @media screen and (max-width: 600px) {
   .card {
-    width: 330px;
+    margin: 0px 20px;
+  }
+
+  .item-details {
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .left-column {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .right-column {
+    max-width: 100%;
+  }
+  
+  .price-card {
+    margin-top: 20px;
   }
 }
