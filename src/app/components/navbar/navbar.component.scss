@@ -19,12 +19,17 @@
   height: auto;
 }
 
+.me-auto {
+  margin-left: auto;
+}
 .nav1 {
   color: $navy;
+  font-size: 20px;
 }
 
 .nav2 {
   color: $white;
+  font-size: 15px;
 }
 
 .nav2:hover {
@@ -52,5 +57,9 @@
 @media screen and (max-width: 600px) {
   .navbar-brand {
     margin-left: 0;
+  }
+
+  .me-auto {
+    margin-left: auto;
   }
 }

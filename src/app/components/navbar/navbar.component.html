@@ -1,18 +1,16 @@
 <div *ngIf="!isLoggedIn">
   <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container-fluid">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link nav1" [routerLink]="['/']">Back</a>
-            </li>
-          </ul>
-    </div>
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item">
+        <a class="nav-link nav1" [routerLink]="['/']">Home</a>
+      </li>
+    </ul>
   </nav>
 </div>
 
   <div *ngIf="isLoggedIn">
     <nav class="navbar navbar-expand-lg white-nav">
-      <a class="navbar-brand"><img src="https://sat02pap001files.storage.live.com/y4mUfnXsPe5Q9vegk0JAkQtv_dLw7izWG4rr_qaXsfULcFYB5CZleI9zHS12vuQ9blTZMhD0i8AurNeYdmdvnza47K0Oh7Awm3OICMRb_BUb2eneXRk_Lf2LPc9JmiQjJA9aK4ZHqQvcHs0FNVbtyvssGHC_oqk23Nyky0qWCyfUi-n5wQri8k0cD6LI8BO9sWd?width=256&height=111&cropmode=none" width="150" height="60" /></a>
+      <a class="navbar-brand"><img src="https://sat02pap001files.storage.live.com/y4mUfnXsPe5Q9vegk0JAkQtv_dLw7izWG4rr_qaXsfULcFYB5CZleI9zHS12vuQ9blTZMhD0i8AurNeYdmdvnza47K0Oh7Awm3OICMRb_BUb2eneXRk_Lf2LPc9JmiQjJA9aK4ZHqQvcHs0FNVbtyvssGHC_oqk23Nyky0qWCyfUi-n5wQri8k0cD6LI8BO9sWd?width=256&height=111&cropmode=none" width="160" height="70" /></a>
       <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-expanded="false" aria-label="Toggle navigation"
       (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarColor02">
         <span class="navbar-toggler-icon">
