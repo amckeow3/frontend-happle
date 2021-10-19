@@ -24,6 +24,7 @@ import { ConfirmationDialogService } from './_services/confirmation-dialog/confi
 import { ChoosePaymentComponent } from './components/choose-payment/choose-payment.component';
 import { ReviewOrderComponent } from './components/review-order/review-order.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
+import { UpdateEmailComponent } from './components/update-email/update-email.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { OrderConfirmationComponent } from './components/order-confirmation/orde
     NotificationsComponent,
     ChoosePaymentComponent,
     ReviewOrderComponent,
-    OrderConfirmationComponent
+    OrderConfirmationComponent,
+    UpdateEmailComponent
   ],
   imports: [
     BrowserModule,

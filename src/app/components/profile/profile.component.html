@@ -12,22 +12,22 @@
     {{ currentUser.first_name }} {{currentUser.last_name}}
   </div>
   <div class="info">
-    <button type="button" class="edit-btn">edit</button>
+    <!--<button type="button" class="edit-btn" [routerLink]="['/update-email']" [queryParams]="{ username: currentUser.username }">edit</button>-->
     <h5 class="mb-1">Email:</h5>
       {{ currentUser.email }}
   </div>
   <div class="info">
-    <button type="button" class="edit-btn">edit</button>
+    <!--<button type="button" class="edit-btn">edit</button>-->
     <h5 class="mb-1">Address:</h5>
       {{ currentUser.address }}
   </div>
   <div class="info">
-    <button type="button" class="edit-btn">edit</button>
+    <!--<button type="button" class="edit-btn">edit</button>-->
     <h5 class="mb-1">Zipcode:</h5>
       {{ currentUser.zipcode }}
   </div>
   <div class="info">
-    <button type="button" class="edit-btn">edit</button>
+    <!--<button type="button" class="edit-btn">edit</button>-->
     <h5 class="mb-1">Phone Number:</h5>
       {{ currentUser.phone }}
 </div>

@@ -14,6 +14,7 @@ import { NotificationsComponent } from './components/notifications/notifications
 import { ChoosePaymentComponent } from './components/choose-payment/choose-payment.component';
 import { ReviewOrderComponent } from './components/review-order/review-order.component';
 import { OrderConfirmationComponent } from './components/order-confirmation/order-confirmation.component';
+import { UpdateEmailComponent } from './components/update-email/update-email.component';
 
 const routes: Routes = [
   {
@@ -72,6 +73,10 @@ const routes: Routes = [
     path: 'order-confirmation',
     component: OrderConfirmationComponent
   },
+  {
+    path: 'update-email',
+    component: UpdateEmailComponent
+  }
 ];
 
 @NgModule({
